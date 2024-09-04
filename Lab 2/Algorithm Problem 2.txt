@@ -1,0 +1,15 @@
+Q. Implement an algorithm where the user enters a number, and an appropriate month is displayed.
+
+Ask the user to enter a number between 1 and 12
+Display January if the number is 1
+Display February if the number is 2
+Display March if the number is 3
+Display April if the number is 4
+Display May if the number is 5
+Display June if the number is 6
+Display July if the number is 7
+Display August if the number is 8
+Display September if the number is 9
+Display October if the number is 10
+Display November if the number is 11
+Display December if the number is 12

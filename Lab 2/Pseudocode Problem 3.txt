@@ -1,0 +1,16 @@
+Q. Create a small calculator which only does ‘+’ or ‘-‘ Operations. (Hint: Take three variable inputs with
+one being used for the operator)
+
+START
+    PRINT("Enter two numbers: ")
+    INPUT Num1, Num2
+    REPEAT
+        PRINT("Enter an operator: ")
+        INPUT Operator
+        IF Operator == "+"
+            THEN
+                Answer = Num1 + Num2
+        ELSEIF Operator == "-"
+                Answer = Num1 - Num2
+    UNTIL Operator = "+" OR Operator = "-"
+END

@@ -1,0 +1,9 @@
+Take three variables as input and add them without using the + operator (Use your head for this)
+
+START
+    PRINT("Enter three numbers: ")
+    INPUT Num1, Num2, Num3
+    HalfSum = Num 1 - (-Num2)
+    Sum = HalfSum - (-Num3)
+    PRINT("Their sum is: ", Sum)
+END

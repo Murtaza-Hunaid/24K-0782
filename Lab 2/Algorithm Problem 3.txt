@@ -1,0 +1,10 @@
+Q. Implement an algorithm for making a simple calculator with all the operators (+,-,*,/,%)
+
+Ask the user to enter numbers
+Ask the user to enter an operator
+If + operator is entered, set answer as addition of entered numbers
+If - operator is entered, set answer as difference of entered numbers
+If * operator is entered, set answer as product of entered numbers
+If / operator is entered, set answer as quotient of entered numbers
+If % operator is entered, set answer as remainder of division of entered numbers
+Display answer

@@ -1,0 +1,15 @@
+Q. Find the maximum number in any of three variables.
+
+START
+    PRINT("Enter three numbers: ")
+    INPUT Num1, Num2, Num3
+    IF Num1 > Num2 AND Num1 > Num3
+        THEN
+            LargestNum = Num1
+    ELSEIF Num2 > Num1 AND Num2 > Num3
+        THEN
+            LargestNum = Num2
+    ELSE LargestNum = Num3
+    ENDIF
+    PRINT("Maximum number is: ", LargestNum)
+END

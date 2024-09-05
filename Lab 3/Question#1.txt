@@ -1,2 +1,3 @@
 Q. Explain the output of this C program. Why the wrong value is being displayed in the output?
 
+The output is wrong because the variable 'testInteger' is out of range for int datatype.

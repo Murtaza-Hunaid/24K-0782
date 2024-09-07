@@ -9,5 +9,4 @@ int main() {
     new_salary = salary - tax;
     printf("The tax you have to pay is: %.2f\n", tax);
     printf("Your net salary after paying tax is: %.2f\n", new_salary);
-    return 0;
 }

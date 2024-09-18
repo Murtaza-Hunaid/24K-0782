@@ -1,5 +1,4 @@
 #include<stdio.h>
-
 int main(){
 	float amount, saved_amount, amount_after_discount, discount, discounted_price;
 	printf("Enter cost of items: ");
@@ -15,9 +14,9 @@ int main(){
 	else{
 		printf("Invalid Input");}
 	discounted_price = amount * discount;
-	total = amount - discounted_price;
-	saved = amount - total;
+	amount_after_discount = amount - discounted_price;
+	saved_amount = amount - total;
 	printf("Actual Amount: %.2f\n", amount);
-	printf("Saved Amount: %.2f\n", saved);
-	printf("Total Amount after discount: %.2f\n", total);
+	printf("Saved Amount: %.2f\n", saved_amount);
+	printf("Total Amount after discount: %.2f\n", amount_after_discount);
 }

@@ -35,6 +35,6 @@ int main(){
 			default:
 				printf("Greater than 9");
 				break;}	} 
-  else{
+	else {
 		printf("Number is zero or negative");}
 }

@@ -6,5 +6,5 @@ int main(){
 	if (num%3 == 0){
 		printf("%d is a multiple of 3", num);} 
 	else {
-		printf("%d is not a multiple of 3...", num);}
+		printf("%d is not a multiple of 3", num);}
 }

@@ -1,17 +1,14 @@
 #include<stdio.h>
-
 int main(){
 	int customer_id;
 	char customer_name[20];
 	float unit_consumed, unit_charge, total_bill, surcharge_amount = 0;
-	
 	printf("Enter Customer Id: ");
 	scanf("%d", &customer_id);
 	printf("Enter Customer Name: ");
 	scanf("%s", &customer_name);
 	printf("Enter Unit Consumed: ");
 	scanf("%f", &unit_consumed);
-	
 	if (unit_consumed < 200){
 		unit_charge = 16.20;}
 	else if (unit_consumed >= 200 && unit_consumed < 300){

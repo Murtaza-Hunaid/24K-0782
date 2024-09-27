@@ -1,0 +1,1 @@
+Firstly, we will check '5>8'. It is false so the false statement(else) will run. Then, intead of checking '1!=2', it will check '2 < 5' as "<" sign has higher predence than "!=" so it will return true, which means it will return 1. Lastly, we will check '1!=1'. which is false so the output will be 30.

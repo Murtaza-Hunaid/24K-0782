@@ -10,5 +10,15 @@ int main(){
       			if(num % i == 0){
          			prime = 0;
           			break;} 
-       			else {
-         			continue;}}
+    	if (prime == 1){
+        	printf("%d is a prime number\n", num);
+        	printf("Fibonacci series up to %d:\n", num);
+        	int a = 0, b = 1;
+	        while (a <= num){
+            		printf("%d ", a);
+            		int temp = a;
+            		a = b;
+            		b = temp + b;}}
+	else {
+        	printf("%d is not a prime number", num);}
+}

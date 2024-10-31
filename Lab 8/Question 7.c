@@ -2,10 +2,8 @@
 int main() {
     char grid[105][105] = {};
     int i = 4, j = 0, up = 1, spaces = 1, count = 0;
-    printf("CALCULATING....\n");
     while (count != 3)
     {
-        printf("%d %d %d\n", i, j, spaces);
         grid[i][j] = '*';
         if (up)
         {

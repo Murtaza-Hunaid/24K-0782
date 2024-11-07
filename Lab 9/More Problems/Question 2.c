@@ -1,6 +1,6 @@
 #include<stdio.h>
 void swapIntegers(int a, int b);
-int main(){
+int main() {
     int num1, num2;
     printf("Enter the first number: ");
     scanf("%d", &num1);
@@ -11,7 +11,7 @@ int main(){
     return 0;
 }
 
-void swapIntegers(int a, int b){
+void swapIntegers(int a, int b) {
     int temp;
     temp = a;
     a = b;

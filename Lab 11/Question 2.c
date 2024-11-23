@@ -18,18 +18,18 @@ int main() {
         return 0; }
     while (fscanf(file, "%s", word) != EOF) {
         found = 0;
-        for (i = 0; i < wordCount; i++) {
+        for (i = 0; i < word_count; i++) {
             if (strcmp(words[i], word) == 0) {
                 counts[i]++;
                 found = 1;
                 break; } }
-        if (!found && wordCount < MAX_WORDS) {
-            strcpy(words[wordCount], word);
-            counts[wordCount] = 1;
-            wordCount++; } }
+        if (!found && word_count < MAX_WORDS) {
+            strcpy(words[word_count], word);
+            counts[word_count] = 1;
+            word_count++; } }
     fclose(file);
     printf("Word Frequencies:\n");
-    for (i = 0; i < wordCount; i++) {
+    for (i = 0; i < word_count; i++) {
         printf("%s: %d\n", words[i], counts[i]); }
     return 0;
 }

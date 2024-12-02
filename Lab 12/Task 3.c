@@ -27,7 +27,6 @@ int main() {
         printf("Enter %d additional elements for the array:\n", new_size - n);
         for (i = n; i < new_size; i++) {
             scanf("%d", &arr[i]); } }
-
     largest_num = arr[0];
     for (i = 1; i < new_size; i++) {
         if (arr[i] > largest_num) {

@@ -67,5 +67,5 @@ int main() {
 	else {
     	cout << "Is Employee 2 a Manager? No" << endl; }
 	cout << endl;
-  return 0;
+    return 0;
 }

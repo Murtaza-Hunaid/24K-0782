@@ -1,272 +1,154 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
-class Book
-{
-    string id;
-    string title;
-    string author;
+class Book {
+    string id, title, author;
     bool availability;
 
 public:
-    Book() {
-        id = " ";
-        title = " ";
-        author = " ";
-        availability = false;
-    }
-
-    Book(string id, string title, string author, bool availability) {
+    Book(string id = "", string title = "", string author = "", bool availability = true) {
         this->id = id;
         this->title = title;
         this->author = author;
         this->availability = availability;
     }
 
-    void setID(string id)
-    {
-        this->id = id;
-    }
+    void setID(string id) { 
+		this->id = id; }
+    void setTitle(string title) { 
+		this->title = title; }
+    void setAuthor(string author) { 
+		this->author = author; }
+    void setAvailability(bool availability) { 
+		this->availability = availability; }
 
-    void setTitle(string title)
-    {
-        this->title = title;
-    }
-
-    void setAuthor(string author)
-    {
-        this->author = author;
-    }
-
-    void setAvailability(bool availability)
-    {
-        this->availability = availability;
-    }
-
-    string getID()
-    {
-        return this->id;
-    }
-
-    string getTitle()
-    {
-        return this->title;
-    }
-
-    string getAuthor()
-    {
-        return this->author;
-    }
-
-    bool getAvailability()
-    {
-        return this->availability;
-    }
+    string getID() { 
+		return id; }
+    string getTitle() { 
+		return title; }
+    string getAuthor() { 
+		return author; }
+    bool getAvailability() { 
+		return availability; }
 };
 
-class Library
-{
-    Book *books;
-    int num;
+class Library {
+    Book* books; 
+    int num_books; 
 
 public:
-    Library()
-    {
-        books = nullptr;
-        num = 0;
+    Library() {
+        books = NULL;
+        num_books = 0;
     }
 
-    Library(int num)
-    {
-        this->num = num;
-        books = new Book[this->num];
+    Library(int num_books) {
+        this->num_books = num_books;
+        books = new Book[num_books];
     }
 
-    void addBook()
-    {
+    void addBook() {
         string id, title, author;
-        bool availability;
+        cout << "Enter the ID of the book: ";
+        cin.ignore();
+        getline(cin, id);
+        cout << "Enter the title of the book: ";
+        getline(cin, title);
+        cout << "Enter the author of the book: ";
+        getline(cin, author);
+        Book* newBooks = new Book[num_books + 1];
+        for (int i = 0; i < num_books; i++) {
+            newBooks[i] = books[i]; }
+        newBooks[num_books] = Book(id, title, author);
+        delete[] books;
+        books = newBooks;
+        num_books++;
+        cout << "Book added successfully.\n"; }
 
-        if (books == nullptr || num == 0)
-        {
-            books = new Book[1];
-            cout << "Enter the ID of book 1: ";
-            cin.ignore();
-            getline(cin, id);
-            cout << "Enter the title of book 1: ";
-            getline(cin, title);
-            cout << "Enter the author of book 1: ";
-            getline(cin, author);
-            books[0].setID(id);
-            books[0].setTitle(title);
-            books[0].setAuthor(author);
-            books[0].setAvailability(true);
-            num++;
-        }
-        else
-        {
-            Book *newBooks = new Book[num + 1];
-            for (int i = 0; i < num; i++)
-            {
-                newBooks[i] = books[i];
-            }
-
-            cout << "Enter the ID of book " << (num + 1) << ": ";
-            cin.ignore();
-            getline(cin, id);
-            cout << "Enter the title of book " << (num + 1) << ": ";
-            getline(cin, title);
-            cout << "Enter the author of book " << (num + 1) << ": ";
-            getline(cin, author);
-
-            newBooks[num].setID(id);
-            newBooks[num].setTitle(title);
-            newBooks[num].setAuthor(author);
-            newBooks[num].setAvailability(true);
-
-            delete[] books;
-            books = newBooks;
-            num++;
-        }
-    }
-
-    void borrowBook()
-    {
-        if (books == nullptr || num <= 0)
-        {
-            cout << "No books have been initialized yet." << endl;
-            return;
-        }
-
+    void borrowBook() {
+        if (num_books <= 0) {
+            cout << "No books available in the library.\n";
+            return; }
         string bookTitle;
         cin.ignore();
-        cout << "Enter the title of the book you would like to borrow: ";
+        cout << "Enter the title of the book to borrow: ";
         getline(cin, bookTitle);
-
-        int i, flag = 0;
-        for (i = 0; i < num; i++)
-        {
-            if (bookTitle == books[i].getTitle())
-            {
-                flag = 1;
-                break;
-            }
-        }
-
-        if (flag == 0)
-        {
-            cout << "The book title was not found." << endl;
-            return;
-        }
-
-        if (books[i].getAvailability())
-        {
-            cout << "The book \"" << books[i].getTitle() << "\" is available at the moment. Issued to the user successfully." << endl;
-            books[i].setAvailability(false);
-        }
-        else
-        {
-            cout << "Sorry! The book \"" << books[i].getTitle() << "\" is not available at the moment." << endl;
-        }
+        for (int i = 0; i < num_books; i++) {
+            if (books[i].getTitle() == bookTitle) {
+                if (books[i].getAvailability()) {
+                    books[i].setAvailability(false);
+                    cout << "You have borrowed the book: " << books[i].getTitle() << endl; } 
+				else {
+                    cout << "The book is already borrowed\n"; }
+                return; } }
+        cout << "Book not found in the library\n";
     }
 
-    void returnBook()
-    {
-        if (books == nullptr || num <= 0)
-        {
-            cout << "No books have been initialized yet." << endl;
-            return;
-        }
-
+    void returnBook() {
+        if (num_books <= 0) {
+            cout << "No books available in the library\n";
+            return; }
         string bookTitle;
         cin.ignore();
-        cout << "Enter the title of the book you would like to return: ";
+        cout << "Enter the title of the book to return: ";
         getline(cin, bookTitle);
-
-        int i, flag = 0;
-        for (i = 0; i < num; i++)
-        {
-            if (bookTitle == books[i].getTitle())
-            {
-                flag = 1;
-                break;
-            }
-        }
-
-        if (flag == 0)
-        {
-            cout << "The book title was not found." << endl;
-            return;
-        }
-
-        if (books[i].getAvailability() == false)
-        {
-            books[i].setAvailability(true);
-            cout << "The book \"" << books[i].getTitle() << "\" has been returned successfully." << endl;
-        }
-        else
-        {
-            cout << "The book \"" << books[i].getTitle() << "\" is already available. Cannot return a book which has not been borrowed." << endl;
-        }
+        for (int i = 0; i < num_books; i++) {
+            if (books[i].getTitle() == bookTitle) {
+                if (!books[i].getAvailability()) {
+                    books[i].setAvailability(true);
+                    cout << "You have returned the book: " << books[i].getTitle() << endl; } 
+				else {
+                    cout << "The book is already available in the library\n"; }
+                return; } }
+        cout << "Book not found in the library\n";
     }
 
-    void displayBooks()
-    {
-        if (books == nullptr || num <= 0)
-        {
-            cout << "No books have been initialized yet." << endl;
-            return;
-        }
-
-        cout << endl
-             << "Displaying the details of all available books:" << endl;
-        for (int i = 0; i < num; i++)
-        {
-            cout << endl
-                 << "Book " << (i + 1) << ": " << endl;
+    void displayBooks() {
+        if (num_books <= 0) {
+            cout << "No books available in the library\n";
+            return; }
+        cout << "\n----- List of Books -----\n";
+        for (int i = 0; i < num_books; i++) {
             cout << "ID: " << books[i].getID() << endl;
-            cout << "Title: " << books[i].getTitle() << endl;
-            cout << "Author: " << books[i].getAuthor() << endl;
-            cout << "Available: " << (books[i].getAvailability() ? "Yes" : "No") << endl;
-        }
-    }
-
-    ~Library()
-    {
+			cout << "Title: " << books[i].getTitle() << endl;
+			cout << "Author: " << books[i].getAuthor() << endl;
+			cout << "Availability: ";
+			if (books[i].getAvailability()) {
+    			cout << "Available" << endl; } 
+			else {
+    			cout << "Borrowed" << endl; }
+			cout << endl; } 
+	}
+    ~Library() {
         delete[] books;
     }
 };
 
-int main()
-{
+int main() {
     Library lib;
     int choice;
-    cout << "----- Library System Menu -----" << endl;
-    cout << "Enter 1 to add a book" << endl;
-    cout << "Enter 2 to display all books" << endl;
-    cout << "Enter 3 to borrow a book" << endl;
-    cout << "Enter 4 to return a book" << endl;
-    cout << "Enter 5 to exit" << endl;
-    while (1) {
-        cout << endl
-             << "Enter your choice: " << endl;
+    while (true) {
+        cout << "\n----- Library System -----\n";
+        cout << "1. Add Book\n";
+        cout << "2. Display Books\n";
+        cout << "3. Borrow Book\n";
+        cout << "4. Return Book\n";
+        cout << "5. Exit\n";
+        cout << "Enter your choice: ";
         cin >> choice;
-        switch (choice) {
-        case 1:
-            lib.addBook();
-            break;
-        case 2:
-            lib.displayBooks();
-            break;
-        case 3:
-            lib.borrowBook();
-            break;
-        case 4:
-            lib.returnBook();
-            break;
-        case 5:
-            cout << "Exiting the program...." << endl;
-            return 0;
-        }
-    }
+        if (choice == 1) {
+            lib.addBook(); } 
+		else if (choice == 2) {
+            lib.displayBooks(); } 
+		else if (choice == 3) {
+            lib.borrowBook(); } 
+		else if (choice == 4) {
+            lib.returnBook(); } 
+		else if (choice == 5) {
+            cout << "Exiting the Library System\n";
+            break; } 
+		else {
+            cout << "Invalid choice. Please try again.\n"; } }
+    return 0;
 }

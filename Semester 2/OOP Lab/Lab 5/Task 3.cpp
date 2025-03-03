@@ -15,9 +15,7 @@ public:
         bool valid = true;
         for (int i = 0; i < str.size(); i++) {
             char c = str[i];
-            if (c >= 'a' && c <= 'z')
-                continue;
-            if (c >= 'A' && c <= 'Z')
+            if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
                 continue;
             valid = false;
             break; }

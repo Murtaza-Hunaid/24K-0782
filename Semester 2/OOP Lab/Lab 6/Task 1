@@ -1,0 +1,109 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Message {
+private:
+    string text;
+
+public:
+    virtual string toString() const {
+        return text;
+    }
+
+    void setText(const string& newText) {
+        text = newText;
+    }
+};
+
+class SMS : public Message {
+private:
+    string recipientContactNo;
+
+public:
+    void setRecipientContactNo(const string& number) {
+        recipientContactNo = number;
+    }
+
+    string getRecipientContactNo() const {
+        return recipientContactNo;
+    }
+
+    string toString() const override {
+        return recipientContactNo + " " + Message::toString();
+    }
+};
+
+class Email : public Message {
+private:
+    string sender;
+    string receiver;
+    string subject;
+
+public:
+    void setSender(const string& newSender) {
+        sender = newSender;
+    }
+    
+    string getSender() const {
+        return sender;
+    }
+
+    void setReceiver(const string& newReceiver) {
+        receiver = newReceiver;
+    }
+    
+    string getReceiver() const {
+        return receiver;
+    }
+
+    void setSubject(const string& newSubject) {
+        subject = newSubject;
+    }
+
+    string getSubject() const {
+        return subject;
+    }
+
+    string toString() const override {
+        return sender + " " + receiver + " " + subject + " " + Message::toString();
+    }
+};
+
+bool ContainsKeyword(const Message& messageObject, const string& keyword) {
+    return messageObject.toString().find(keyword) != string::npos;
+}
+
+string encodeMessage(const string& message) {
+    string encodedMessage;
+    for (char ch : message) {
+        if (isalpha(ch)) {
+            if (ch == 'z') {
+                encodedMessage += 'a'; } 
+			else if (ch == 'Z') {
+                encodedMessage += 'A'; } 
+			else {
+                encodedMessage += ch + 1; } } 
+			else {
+            encodedMessage += ch; } }
+    return encodedMessage;
+}
+
+int main() {
+    SMS sms;
+    sms.setText("Hello, I am Murtaza.");
+    sms.setRecipientContactNo("03327327086");
+    cout << sms.toString() << endl;
+    Email email;
+    email.setText("Helloo, I am Murtaza.");
+    email.setSender("murtaza@gmail.com");
+    email.setReceiver("k240782@nu.edu.pk");
+    email.setSubject("Email");
+    cout << email.toString() << endl;
+	cout << boolalpha;
+    cout << ContainsKeyword(sms, "SMS") << endl;
+    cout << ContainsKeyword(email, "email") << endl;
+    cout << encodeMessage("This is Murtaza") << endl;
+    return 0;
+}

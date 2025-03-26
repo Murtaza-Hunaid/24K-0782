@@ -1,0 +1,96 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class BankAccount {
+protected:
+    string accountNumber;
+    double balance;
+    
+public:
+    BankAccount(string accNum, double bal) : accountNumber(accNum), balance(bal) {}
+    
+    virtual ~BankAccount() {}
+    
+    virtual double calculateInterest() = 0;
+    
+    void deposit(double amount) { balance += amount; }
+    
+    void deposit(string type, double amount) {
+        if (type == "cash" || type == "check" || type == "online") balance += amount;
+    }
+    
+    virtual bool withdraw(double amount) { return false; }
+    
+    double getBalance() const { return balance; }
+    
+    double operator+(const BankAccount& other) {
+        return balance + other.balance;
+    }
+    
+    double operator-(double amount) {
+        return balance - amount;
+    }
+    
+    double operator*(double rate) {
+        return balance * rate;
+    }
+    double operator/(int installments) {
+        return balance / installments;
+    }
+};
+
+class SavingsAccount : public BankAccount {
+public:
+    SavingsAccount(string accNum, double bal) : BankAccount(accNum, bal) {}
+    
+    double calculateInterest() override { return balance * 0.05; }
+    
+    bool withdraw(double amount) override {
+        if (balance - amount >= 500) {
+            balance -= amount;
+            return true; }
+        return false;
+    }
+};
+
+class CurrentAccount : public BankAccount {
+public:
+    CurrentAccount(string accNum, double bal) : BankAccount(accNum, bal) {}
+    
+    double calculateInterest() override { return 0; }
+    
+    bool withdraw(double amount) override {
+        if (balance - amount >= -1000) {
+            balance -= amount;
+            return true; }
+        return false;
+    }
+};
+
+int main() {
+    SavingsAccount sa("SA001", 1000);
+    CurrentAccount ca("CA001", 2000);
+    sa.deposit(500);
+    sa.deposit("cash", 300);
+    sa.deposit("check", 200);
+    sa.deposit("online", 100);
+    ca.deposit(1000);
+    ca.deposit("cash", 400);
+    ca.deposit("check", 300);
+    ca.deposit("online", 200);
+    sa.withdraw(600);
+    ca.withdraw(3500);
+    double totalBalance = sa + ca;
+    double remainingAfterWithdrawal = sa - 200;
+    double interestApplied = ca * 1.05;
+    double installment = sa / 4;
+    cout << "Total balance: " << totalBalance << endl;
+    cout << "Remaining after withdrawal: " << remainingAfterWithdrawal << endl;
+    cout << "Interest applied: " << interestApplied << endl;
+    cout << "Installment amount: " << installment << endl;
+    cout << "Savings Interest: " << sa.calculateInterest() << endl;
+    cout << "Current Interest: " << ca.calculateInterest() << endl;
+    return 0;
+}

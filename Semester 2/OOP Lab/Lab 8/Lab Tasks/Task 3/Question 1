@@ -1,5 +1,5 @@
-/*Yes, a friend function can be used to overload the += operator (or any operator that modifies the left-hand operand). The friend 
-function must take the left-hand operand as a reference parameter (to modify it) and return a reference to the modified object for chaining.*/
+/*Yes, a friend function can be used to overload the += operator or any operator that modifies the left-hand operand. The friend 
+function must take the left-hand operand as a reference parameter to modify it and return a reference to the modified object for chaining.*/
 
 #include <iostream>
 using namespace std;

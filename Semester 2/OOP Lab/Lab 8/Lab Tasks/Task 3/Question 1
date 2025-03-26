@@ -1,0 +1,27 @@
+/*Yes, a friend function can be used to overload the += operator (or any operator that modifies the left-hand operand). The friend 
+function must take the left-hand operand as a reference parameter (to modify it) and return a reference to the modified object for chaining.*/
+
+#include <iostream>
+using namespace std;
+
+class Number {
+private:
+    int value;
+public:
+    Number(int v) : value(v) {}
+    void print() const { cout << "Value: " << value << endl; }
+
+    friend Number& operator+=(Number& lhs, const Number& rhs);
+};
+
+Number& operator+=(Number& lhs, const Number& rhs) {
+    lhs.value += rhs.value; 
+    return lhs; 
+}
+
+int main() {
+    Number obj1(5), obj2(10);
+    obj1 += obj2; 
+    obj1.print(); 
+    return 0;
+}

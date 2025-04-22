@@ -14,17 +14,20 @@ int main() {
     cin.ignore();
     cout << "Enter a brief summary of your experience: ";
     getline(cin, summary);
+    
     ofstream outFile("resume.txt", ios::trunc);
     outFile << "Name: " << name << endl;
     outFile << "Email: " << email << endl;
     outFile << "Years of Experience: " << yearsOfExperience << endl;
     outFile << "Summary: " << summary << endl;
     outFile.close();
+    
     ifstream inFile("resume.txt");
     string line;
     cout << "\nResume content after update:\n";
     while (getline(inFile, line)) {
         cout << line << endl; }
     inFile.close();
+    
     return 0;
 }

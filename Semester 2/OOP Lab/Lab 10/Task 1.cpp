@@ -12,9 +12,9 @@ struct Student {
 int main() {
     ofstream outFile("students.txt", ios::out);
 
-    Student students[1];
+    Student students[5];
 
-    for (int i = 0; i < 1; i++) {
+    for (int i = 0; i < 5; i++) {
         cout << "Enter student " << i + 1 << " ID: ";
         cin >> students[i].id;
         cout << "Enter student " << i + 1 << " Name: ";

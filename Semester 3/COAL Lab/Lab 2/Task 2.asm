@@ -2,6 +2,8 @@ INCLUDE Irvine32.inc
 
 .code
 main PROC
+    mov ebx, 20
+
     mov eax, 4C2h
     sub eax, ebx
     add eax, 72o

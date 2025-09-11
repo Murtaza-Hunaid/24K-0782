@@ -17,5 +17,4 @@ main PROC
     mov num3, eax
     exit
 main ENDP
-
 END main

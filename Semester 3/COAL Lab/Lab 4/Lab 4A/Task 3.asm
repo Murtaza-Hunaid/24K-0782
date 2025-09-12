@@ -3,9 +3,9 @@
 INCLUDE Irvine32.inc
 
 .data
-day_temp   DWORD 30
-night_temp DWORD 18
-diff      DWORD ?
+day_temp    DWORD 30
+night_temp  DWORD 18
+diff    DWORD ?
 
 .code
 main PROC

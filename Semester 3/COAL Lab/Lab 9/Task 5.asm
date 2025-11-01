@@ -9,6 +9,7 @@ INCLUDE Irvine32.inc
     above DWORD 0
     below DWORD 0
     scaled DWORD 0
+    rotated BYTE 0
     msg1 BYTE "Enter reading: ",0
     msg2 BYTE "Sum of readings= ",0
     msg3 BYTE "Average reading= ",0
@@ -23,6 +24,7 @@ main PROC
     mov esi, OFFSET readings
     mov edx, OFFSET msg1
     call WriteString
+
 inputLoop:
     call ReadInt
     mov [esi], eax
@@ -31,6 +33,8 @@ inputLoop:
     call CalcSumAndAvg
     mov ecx, LENGTHOF readings
     mov esi, OFFSET readings
+    mov above, 0
+    mov below, 0
 
 countLoop:
     mov eax, [esi]
@@ -53,43 +57,44 @@ next:
     mov eax, avg
     shl eax, 1
     mov scaled, eax
-    mov al, BYTE PTR scaled
-    ror al, 1
+    mov bl, BYTE PTR scaled
+    ror bl, 1
+    mov rotated, bl
     mov edx, OFFSET msg2
     call WriteString
     mov eax, sum
     call WriteDec
-    call crlf
+    call Crlf
 
     mov edx, OFFSET msg3
     call WriteString
     mov eax, avg
     call WriteDec
-    call crlf
+    call Crlf
 
     mov edx, OFFSET msg4
     call WriteString
     mov eax, above
     call WriteDec
-    call crlf
+    call Crlf
 
     mov edx, OFFSET msg5
     call WriteString
     mov eax, below
     call WriteDec
-    call crlf
+    call Crlf
 
     mov edx, OFFSET msg6
     call WriteString
     mov eax, scaled
     call WriteDec
-    call crlf
+    call Crlf
 
     mov edx, OFFSET msg7
     call WriteString
-    movzx eax, al
-    call WriteBin
-    call crlf
+    movzx eax, rotated
+    call WriteBinB
+    call Crlf
     exit
 main ENDP
 
@@ -102,9 +107,10 @@ sumLoop:
     add eax, [esi]
     add esi, TYPE readings
     loop sumLoop
+
     mov sum, eax
     mov ebx, LENGTHOF readings
-    mov edx, 0
+    xor edx, edx
     div ebx
     mov avg, eax
     ret

@@ -3,43 +3,64 @@
 INCLUDE Irvine32.inc
 
 .data
-    msg1 BYTE "Enter first number: ",0
-    msg2 BYTE "Enter second number: ",0
-    msg3 BYTE "Product = ",0
-    num1 DWORD ?
-    num2 DWORD ?
-    product DWORD 0
+    marks DWORD 50 DUP(?)              
+    count_pass DWORD 0
+    count_fail DWORD 0
+    num_stds DWORD ?
+    msg1 BYTE "Enter number of students: ",0
+    msg2 BYTE "Enter marks: ",0
+    msg3 BYTE "Passed Students= ",0
+    msg4 BYTE "Failed students= ",0
 
 .code
 main PROC
     mov edx, OFFSET msg1
     call WriteString
     call ReadInt
-    mov num1, eax
+    mov num_stds, eax
+    mov ecx, eax
+    mov esi, OFFSET marks
+
+inputLoop:
     mov edx, OFFSET msg2
     call WriteString
     call ReadInt
-    mov num2, eax
-    mov eax, num1        
-    mov ebx, num2       
-    mov ecx, 0          
+    mov [esi], eax
+    add esi, TYPE marks
+    loop inputLoop
 
-multiply_loop:
-    test ebx, 1         
-    jz skip_add
-    add ecx, eax 
-    
-skip_add:
-    shl eax, 1           
-    shr ebx, 1          
-    cmp ebx, 0
-    jne multiply_loop
-
+    call CountGrades
     mov edx, OFFSET msg3
     call WriteString
-    mov eax, ecx
+    mov eax, count_pass
+    call WriteDec
+    call crlf
+
+    mov edx, OFFSET msg4
+    call WriteString
+    mov eax, count_fail
     call WriteDec
     call crlf
     exit
 main ENDP
+
+CountGrades PROC
+    mov ecx, num_stds
+    mov esi, OFFSET marks
+
+nextMark:
+    mov eax, [esi]
+    cmp eax, 50
+    jl fail
+    inc count_pass
+    jmp cont
+
+fail:
+    inc count_fail
+
+cont:
+    add esi, TYPE marks
+    loop nextMark
+    ret
+CountGrades ENDP
 END main

@@ -3,7 +3,7 @@
 INCLUDE Irvine32.inc
 
 .data
-    msg BYTE "Product of three numbers = ", 0
+    msg BYTE "Product= ", 0
 
 .code
 main PROC

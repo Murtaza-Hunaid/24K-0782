@@ -6,58 +6,40 @@ INCLUDE Irvine32.inc
     array DWORD 1,2,3,4,5,6,7,8,9,10
     arraySize = ($ - array) / TYPE array
     multiplier DWORD 10
-    msg BYTE "Array after multiplication: ",0
 
 .code
-main PROC
-    push OFFSET array
-    push arraySize
-    push multiplier
-    call LoadArray
 
-    mov edx, OFFSET msg
-    call WriteString
-    call Crlf
-    mov esi, OFFSET array
-    mov ecx, arraySize
-    call DisplayArray
-    call Crlf
-    exit
-main ENDP
+DisplayArray PROC arrAddr, arrSize
+    mov esi, arrAddr
+    mov ecx, arrSize
 
-LoadArray PROC
-    push ebp
-    mov ebp, esp
-    push esi
-    push ecx
-    push eax
-    push ebx
-    mov esi, [ebp+16]
-    mov ecx, [ebp+12]
-    mov ebx, [ebp+8]
-
-MultiplyLoop:
-    lodsd
-    mul ebx
-    mov [esi-4], eax
-    loop MultiplyLoop
-
-    pop ebx
-    pop eax
-    pop ecx
-    pop esi
-    pop ebp
-    ret 12
-LoadArray ENDP
-
-DisplayArray PROC
-DisplayLoop:
+L1:
     mov eax, [esi]
     call WriteInt
     call Crlf
     add esi, 4
-    loop DisplayLoop
+    loop L1
+    call Crlf
     ret
 DisplayArray ENDP
 
+LoadArray PROC arrAddr, arrSize, mult
+    mov esi, arrAddr
+    mov ecx, arrSize
+    mov ebx, mult
+
+L1:
+    mov eax, [esi]
+    mul ebx
+    mov [esi], eax
+    add esi, 4
+    loop L1
+    ret
+LoadArray ENDP
+
+main PROC
+    INVOKE LoadArray, OFFSET array, arraySize, multiplier
+    INVOKE DisplayArray, OFFSET array, arraySize
+    exit
+main ENDP
 END main

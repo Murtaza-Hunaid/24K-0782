@@ -9,63 +9,49 @@ INCLUDE Irvine32.inc
     msg2 BYTE "Reversed: ",0
 
 .code
+
+Str_Reverse PROC source, target
+    mov esi, source
+    mov edi, target
+    mov ecx, 0
+
+L1:
+    mov al, [esi]
+    cmp al, 0
+    je L2
+    inc esi
+    inc ecx
+    jmp L1
+    
+L2:
+    mov esi, source
+    add esi, ecx
+    dec esi
+    mov edi, target
+    
+L3:
+    mov al, [esi]
+    mov [edi], al
+    dec esi
+    inc edi
+    loop L3
+  
+    mov BYTE PTR [edi], 0
+    ret
+Str_Reverse ENDP
+
 main PROC
     mov edx, OFFSET msg1
     call WriteString
     mov edx, OFFSET Str1
     call WriteString
-    call Crlf
-
-    push OFFSET Str1
-    push OFFSET Str2
-    call Str_Reverse
-
+    call Crlf   
+    INVOKE Str_Reverse, OFFSET Str1, OFFSET Str2  
     mov edx, OFFSET msg2
     call WriteString
     mov edx, OFFSET Str2
     call WriteString
-    call Crlf
+    call Crlf   
     exit
 main ENDP
-
-Str_Reverse PROC
-    push ebp
-    mov ebp, esp
-    push esi
-    push edi
-    push ecx
-    push eax
-    mov esi, [ebp+12]
-    mov edi, [ebp+8]
-    mov edi, esi
-    mov al, 0
-    mov ecx, -1
-    cld
-    repne scasb
-    mov eax, edi
-    sub eax, esi
-    dec eax
-    mov ecx, eax  
-    mov esi, [ebp+12]
-    add esi, ecx
-    dec esi
-    mov edi, [ebp+8]  
-    std
-ReverseLoop:
-    lodsb
-    cld
-    stosb
-    std
-    loop ReverseLoop
-    
-    cld
-    mov BYTE PTR [edi], 0
-    pop eax
-    pop ecx
-    pop edi
-    pop esi
-    pop ebp
-    ret 8
-Str_Reverse ENDP
-
 END main

@@ -3,50 +3,49 @@
 INCLUDE Irvine32.inc
 
 .data
-    str1 BYTE "ASSEMBLY", 0 ; String to reverse
-    length DWORD 0  ; Will store length of string
+    str1 BYTE "ASSEMBLY", 0 
     msg BYTE "Reversed string: ", 0
 
 .code
 main PROC
-    mov esi, OFFSET str1 ; ESI points to string
-    xor ecx, ecx    ; ECX = length counter
+    mov esi, OFFSET str1    ; esi points to start of the string
+    mov ecx, 0
 
-FindLen:
-    mov al, [esi]   ; Load character
-    cmp al, 0   ; Check if end of string
-    je  LenDone
+len_loop:
+    mov al, [esi]   
+    cmp al, 0
+    je  len_done
     inc esi
     inc ecx                          
-    jmp FindLen
+    jmp len_loop
 
-LenDone:
-    mov length, ecx ; store length
-    xor edi, edi    ; i = 0 points to EDI = left index
-    mov eax, length1
-    shr eax, 1  ; eax = length / 2  (loop limit)
+len_done:
+    mov edx, ecx    ; edx = length
+    shr edx, 1  ; edx = length / 2 (loop count)
+    mov esi, OFFSET str1    ; start pointer
+    mov edi, OFFSET str1    ; end pointer
+    add edi, ecx
+    dec edi ; point to last character
 
-ReverseLoop:
-    cmp edi, eax    ; if i >= length/2, then done
-    jge DoneReverse
+reverse_loop:
+    cmp edx, 0
+    je print_result
 
-    mov ebx, length
-    dec ebx ; convert length to last index (len-1)
-    sub ebx, edi    ; right index = length - i - 1
-    mov dl, str1[edi]    ; temp = str[i]
-    mov dh, str1[ebx]    ; str[i] = str[length - i - 1]
-    mov str1[edi], dh
-    mov str1[ebx], dl    ; str[length - i - 1] = temp
-    inc edi                          
-    jmp ReverseLoop
+    mov al, [esi]   ; swap strl[i]
+    mov bl, [edi]   ; with str1[Length-1-1]
+    mov [esi], bl
+    mov [edi], al
+    inc esi ; move forward
+    dec edi ; move backward
+    dec edx ; loop counter
+    jmp reverse_loop
 
-DoneReverse:
+print_result:
     mov edx, OFFSET msg
     call WriteString
-
     mov edx, OFFSET str1
     call WriteString
-    call CrLf
+    call Crlf
     exit
 main ENDP
 END main

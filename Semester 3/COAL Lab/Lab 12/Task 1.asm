@@ -19,12 +19,12 @@ SearchLoop:
     je NotFound ; If null terminator, then exit loop
 
     cmp al, target  ; Compare with the target character
-    je Found    ; If equal, then go to found
+    je FoundChar    ; If equal, then go to found
 
     inc esi ; Move to next character
     jmp SearchLoop
 
-Found:
+FoundChar:
     mov found, 1    ; Set found = 1
 
 NotFound:

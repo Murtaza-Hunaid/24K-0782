@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This network was created in GeNIe Academic, which can be used for academic teaching and research purposes only -->
+<smile version="1.0" id="Network2" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="Disease">
+			<state id="Flu" />
+			<state id="Cold" />
+			<probabilities>0.3 0.7</probabilities>
+		</cpt>
+		<cpt id="Fever">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>Disease</parents>
+			<probabilities>0.9 0.1 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Cough">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>Disease</parents>
+			<probabilities>0.8 0.2 0.6 0.4</probabilities>
+		</cpt>
+		<cpt id="Fatigue">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>Disease</parents>
+			<probabilities>0.7 0.3 0.3 0.7</probabilities>
+		</cpt>
+		<cpt id="Chills">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>Disease</parents>
+			<probabilities>0.6 0.4 0.4 0.6</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 5.0.5310.0 ACADEMIC" name="Network2">
+			<node id="Disease">
+				<name>Disease</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>282 178 375 264</position>
+				<barchart active="true" />
+			</node>
+			<node id="Fever">
+				<name>Fever</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>93 347 176 424</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Cough">
+				<name>Cough</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>236 346 318 427</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Fatigue">
+				<name>Fatigue</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>382 346 460 426</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Chills">
+				<name>Chills</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>532 346 609 423</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+		</genie>
+	</extensions>
+</smile>

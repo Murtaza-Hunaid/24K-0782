@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This network was created in GeNIe Academic, which can be used for academic teaching and research purposes only -->
+<smile version="1.0" id="Network1" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="Intelligence">
+			<state id="High" />
+			<state id="Low" />
+			<probabilities>0.7 0.3</probabilities>
+		</cpt>
+		<cpt id="StudyHours">
+			<state id="Sufficient" />
+			<state id="Insufficient" />
+			<probabilities>0.6 0.4</probabilities>
+		</cpt>
+		<cpt id="Difficulty">
+			<state id="Hard" />
+			<state id="Easy" />
+			<probabilities>0.4 0.6</probabilities>
+		</cpt>
+		<cpt id="Grade">
+			<state id="A" />
+			<state id="B" />
+			<state id="C" />
+			<parents>Intelligence StudyHours Difficulty</parents>
+			<probabilities>0.5 0.35 0.15 0.85 0.12 0.03 0.3 0.45 0.25 0.65 0.28 0.07000000000000001 0.2 0.45 0.35 0.55 0.35 0.1 0.05 0.3 0.65 0.25 0.45 0.3</probabilities>
+		</cpt>
+		<cpt id="Pass">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>Grade</parents>
+			<probabilities>0.95 0.05 0.8 0.2 0.5 0.5</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 5.0.5310.0 ACADEMIC" name="Network1">
+			<node id="Intelligence">
+				<name>Intelligence</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>156 171 252 254</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="StudyHours">
+				<name>StudyHours</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>327 165 415 250</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Difficulty">
+				<name>Difficulty</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>500 175 589 248</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Grade">
+				<name>Grade</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>321 298 399 374</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Pass">
+				<name>Pass</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>326 412 401 474</position>
+				<barchart active="true" />
+			</node>
+		</genie>
+	</extensions>
+</smile>

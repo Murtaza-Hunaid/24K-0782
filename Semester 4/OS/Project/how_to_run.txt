@@ -1,0 +1,10 @@
+# Compile everything
+make all
+
+# Or clean and rebuild
+make rebuild
+
+# Run the simulator
+make run
+# or directly:
+./banker_simulator

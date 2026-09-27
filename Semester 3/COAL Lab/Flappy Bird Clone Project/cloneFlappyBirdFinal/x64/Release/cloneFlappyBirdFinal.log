@@ -1,0 +1,5 @@
+﻿  Assembling gameManager_checkCollision.asm...
+gameManager_checkCollision.asm(1): error A2008: syntax error : .
+gameManager_checkCollision.asm(2): error A2008: syntax error : .
+gameManager_checkCollision.asm(5): fatal error A1000: cannot open file : Irvine32.inc
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: The command "ml64.exe /c /nologo /Zi /Fo"x64\Release\gameManager_checkCollision.obj" /W3 /errorReport:prompt  /TagameManager_checkCollision.asm" exited with code 1.

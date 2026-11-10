@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\AlgorithmTests.dir/objects.a
+C:\Qt\Tools\mingw1310_64\bin\ar.exe qc CMakeFiles\AlgorithmTests.dir/objects.a @CMakeFiles\AlgorithmTests.dir\objects1.rsp
+C:\Qt\Tools\mingw1310_64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\AlgorithmTests.dir/objects.a -Wl,--no-whole-archive -o AlgorithmTests.exe -Wl,--out-implib,libAlgorithmTests.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\AlgorithmTests.dir\linkLibs.rsp

@@ -1,0 +1,159 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "DAA_Project",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "AlgorithmTests::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-AlgorithmTests-Debug-1f838ee9e23885bd97e1.json",
+					"name" : "AlgorithmTests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "AlgorithmTests_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-AlgorithmTests_autogen-Debug-e6ade799706986be918d.json",
+					"name" : "AlgorithmTests_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "AlgorithmTests_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-AlgorithmTests_autogen_timestamp_deps-Debug-71471aeb3feacce01ed0.json",
+					"name" : "AlgorithmTests_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "BenchmarkRunner::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BenchmarkRunner-Debug-ecbc96fa40d050fc9a63.json",
+					"name" : "BenchmarkRunner",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "BenchmarkRunner_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BenchmarkRunner_autogen-Debug-21c1abbda76979f49ef2.json",
+					"name" : "BenchmarkRunner_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "BenchmarkRunner_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BenchmarkRunner_autogen_timestamp_deps-Debug-942103c6f69484e4b540.json",
+					"name" : "BenchmarkRunner_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "DAA_Project::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DAA_Project-Debug-fc4a1a322f5fd4d094d3.json",
+					"name" : "DAA_Project",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "DAA_Project_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DAA_Project_autogen-Debug-3b0215cd3d2df1a99134.json",
+					"name" : "DAA_Project_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "DAA_Project_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DAA_Project_autogen_timestamp_deps-Debug-9202a1469f4ea97544ec.json",
+					"name" : "DAA_Project_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "DatasetGenerator::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DatasetGenerator-Debug-354d37748bd7016901f5.json",
+					"name" : "DatasetGenerator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "DatasetGenerator_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DatasetGenerator_autogen-Debug-a923934768f7a6c9adc1.json",
+					"name" : "DatasetGenerator_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "DatasetGenerator_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DatasetGenerator_autogen_timestamp_deps-Debug-7c59a5a22d0fcf6b12a9.json",
+					"name" : "DatasetGenerator_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/University/Semester 5/DAA/Project/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug",
+		"source" : "C:/University/Semester 5/DAA/Project"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

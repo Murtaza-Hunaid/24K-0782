@@ -1,0 +1,110 @@
+[
+{
+  "directory": "C:/University/Semester 5/DAA/Project/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\DAA_Project.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\DAA_Project.dir\\DAA_Project_autogen\\mocs_compilation.cpp.obj -c \"C:\\University\\Semester 5\\DAA\\Project\\build\\DAA_Project_autogen\\mocs_compilation.cpp\"",
+  "file": "C:/University/Semester 5/DAA/Project/build/DAA_Project_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/DAA_Project.dir/DAA_Project_autogen/mocs_compilation.cpp.obj"
+},
+{
+  "directory": "C:/University/Semester 5/DAA/Project/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\DAA_Project.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\DAA_Project.dir\\main.cpp.obj -c \"C:\\University\\Semester 5\\DAA\\Project\\main.cpp\"",
+  "file": "C:/University/Semester 5/DAA/Project/main.cpp",
+  "output": "CMakeFiles/DAA_Project.dir/main.cpp.obj"
+},
+{
+  "directory": "C:/University/Semester 5/DAA/Project/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\DAA_Project.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\DAA_Project.dir\\GUI\\MainWindow.cpp.obj -c \"C:\\University\\Semester 5\\DAA\\Project\\GUI\\MainWindow.cpp\"",
+  "file": "C:/University/Semester 5/DAA/Project/GUI/MainWindow.cpp",
+  "output": "CMakeFiles/DAA_Project.dir/GUI/MainWindow.cpp.obj"
+},
+{
+  "directory": "C:/University/Semester 5/DAA/Project/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\DAA_Project.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\DAA_Project.dir\\GUI\\ClosestPairVisualizer.cpp.obj -c \"C:\\University\\Semester 5\\DAA\\Project\\GUI\\ClosestPairVisualizer.cpp\"",
+  "file": "C:/University/Semester 5/DAA/Project/GUI/ClosestPairVisualizer.cpp",
+  "output": "CMakeFiles/DAA_Project.dir/GUI/ClosestPairVisualizer.cpp.obj"
+},
+{
+  "directory": "C:/University/Semester 5/DAA/Project/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\DAA_Project.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\DAA_Project.dir\\GUI\\KaratsubaVisualizer.cpp.obj -c \"C:\\University\\Semester 5\\DAA\\Project\\GUI\\KaratsubaVisualizer.cpp\"",
+  "file": "C:/University/Semester 5/DAA/Project/GUI/KaratsubaVisualizer.cpp",
+  "output": "CMakeFiles/DAA_Project.dir/GUI/KaratsubaVisualizer.cpp.obj"
+},
+{
+  "directory": "C:/University/Semester 5/DAA/Project/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\DAA_Project.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\DAA_Project.dir\\GUI\\BenchmarkVisualizer.cpp.obj -c \"C:\\University\\Semester 5\\DAA\\Project\\GUI\\BenchmarkVisualizer.cpp\"",
+  "file": "C:/University/Semester 5/DAA/Project/GUI/BenchmarkVisualizer.cpp",
+  "output": "CMakeFiles/DAA_Project.dir/GUI/BenchmarkVisualizer.cpp.obj"
+},
+{
+  "directory": "C:/University/Semester 5/DAA/Project/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\DAA_Project.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\DAA_Project.dir\\Algorithms\\ClosestPair.cpp.obj -c \"C:\\University\\Semester 5\\DAA\\Project\\Algorithms\\ClosestPair.cpp\"",
+  "file": "C:/University/Semester 5/DAA/Project/Algorithms/ClosestPair.cpp",
+  "output": "CMakeFiles/DAA_Project.dir/Algorithms/ClosestPair.cpp.obj"
+},
+{
+  "directory": "C:/University/Semester 5/DAA/Project/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\DAA_Project.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\DAA_Project.dir\\Algorithms\\Karatsuba.cpp.obj -c \"C:\\University\\Semester 5\\DAA\\Project\\Algorithms\\Karatsuba.cpp\"",
+  "file": "C:/University/Semester 5/DAA/Project/Algorithms/Karatsuba.cpp",
+  "output": "CMakeFiles/DAA_Project.dir/Algorithms/Karatsuba.cpp.obj"
+},
+{
+  "directory": "C:/University/Semester 5/DAA/Project/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe  @CMakeFiles\\DatasetGenerator.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\DatasetGenerator.dir\\DatasetGenerator_autogen\\mocs_compilation.cpp.obj -c \"C:\\University\\Semester 5\\DAA\\Project\\build\\DatasetGenerator_autogen\\mocs_compilation.cpp\"",
+  "file": "C:/University/Semester 5/DAA/Project/build/DatasetGenerator_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/DatasetGenerator.dir/DatasetGenerator_autogen/mocs_compilation.cpp.obj"
+},
+{
+  "directory": "C:/University/Semester 5/DAA/Project/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe  @CMakeFiles\\DatasetGenerator.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\DatasetGenerator.dir\\DatasetGenerator\\DatasetGenerator.cpp.obj -c \"C:\\University\\Semester 5\\DAA\\Project\\DatasetGenerator\\DatasetGenerator.cpp\"",
+  "file": "C:/University/Semester 5/DAA/Project/DatasetGenerator/DatasetGenerator.cpp",
+  "output": "CMakeFiles/DatasetGenerator.dir/DatasetGenerator/DatasetGenerator.cpp.obj"
+},
+{
+  "directory": "C:/University/Semester 5/DAA/Project/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe  @CMakeFiles\\AlgorithmTests.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\AlgorithmTests.dir\\AlgorithmTests_autogen\\mocs_compilation.cpp.obj -c \"C:\\University\\Semester 5\\DAA\\Project\\build\\AlgorithmTests_autogen\\mocs_compilation.cpp\"",
+  "file": "C:/University/Semester 5/DAA/Project/build/AlgorithmTests_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/AlgorithmTests.dir/AlgorithmTests_autogen/mocs_compilation.cpp.obj"
+},
+{
+  "directory": "C:/University/Semester 5/DAA/Project/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe  @CMakeFiles\\AlgorithmTests.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\AlgorithmTests.dir\\tests\\AlgorithmTests.cpp.obj -c \"C:\\University\\Semester 5\\DAA\\Project\\tests\\AlgorithmTests.cpp\"",
+  "file": "C:/University/Semester 5/DAA/Project/tests/AlgorithmTests.cpp",
+  "output": "CMakeFiles/AlgorithmTests.dir/tests/AlgorithmTests.cpp.obj"
+},
+{
+  "directory": "C:/University/Semester 5/DAA/Project/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe  @CMakeFiles\\AlgorithmTests.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\AlgorithmTests.dir\\Algorithms\\ClosestPair.cpp.obj -c \"C:\\University\\Semester 5\\DAA\\Project\\Algorithms\\ClosestPair.cpp\"",
+  "file": "C:/University/Semester 5/DAA/Project/Algorithms/ClosestPair.cpp",
+  "output": "CMakeFiles/AlgorithmTests.dir/Algorithms/ClosestPair.cpp.obj"
+},
+{
+  "directory": "C:/University/Semester 5/DAA/Project/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe  @CMakeFiles\\AlgorithmTests.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\AlgorithmTests.dir\\Algorithms\\Karatsuba.cpp.obj -c \"C:\\University\\Semester 5\\DAA\\Project\\Algorithms\\Karatsuba.cpp\"",
+  "file": "C:/University/Semester 5/DAA/Project/Algorithms/Karatsuba.cpp",
+  "output": "CMakeFiles/AlgorithmTests.dir/Algorithms/Karatsuba.cpp.obj"
+},
+{
+  "directory": "C:/University/Semester 5/DAA/Project/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe  @CMakeFiles\\BenchmarkRunner.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\BenchmarkRunner.dir\\BenchmarkRunner_autogen\\mocs_compilation.cpp.obj -c \"C:\\University\\Semester 5\\DAA\\Project\\build\\BenchmarkRunner_autogen\\mocs_compilation.cpp\"",
+  "file": "C:/University/Semester 5/DAA/Project/build/BenchmarkRunner_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/BenchmarkRunner.dir/BenchmarkRunner_autogen/mocs_compilation.cpp.obj"
+},
+{
+  "directory": "C:/University/Semester 5/DAA/Project/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe  @CMakeFiles\\BenchmarkRunner.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\BenchmarkRunner.dir\\Benchmark\\BenchmarkRunner.cpp.obj -c \"C:\\University\\Semester 5\\DAA\\Project\\Benchmark\\BenchmarkRunner.cpp\"",
+  "file": "C:/University/Semester 5/DAA/Project/Benchmark/BenchmarkRunner.cpp",
+  "output": "CMakeFiles/BenchmarkRunner.dir/Benchmark/BenchmarkRunner.cpp.obj"
+},
+{
+  "directory": "C:/University/Semester 5/DAA/Project/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe  @CMakeFiles\\BenchmarkRunner.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\BenchmarkRunner.dir\\Algorithms\\ClosestPair.cpp.obj -c \"C:\\University\\Semester 5\\DAA\\Project\\Algorithms\\ClosestPair.cpp\"",
+  "file": "C:/University/Semester 5/DAA/Project/Algorithms/ClosestPair.cpp",
+  "output": "CMakeFiles/BenchmarkRunner.dir/Algorithms/ClosestPair.cpp.obj"
+},
+{
+  "directory": "C:/University/Semester 5/DAA/Project/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe  @CMakeFiles\\BenchmarkRunner.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\BenchmarkRunner.dir\\Algorithms\\Karatsuba.cpp.obj -c \"C:\\University\\Semester 5\\DAA\\Project\\Algorithms\\Karatsuba.cpp\"",
+  "file": "C:/University/Semester 5/DAA/Project/Algorithms/Karatsuba.cpp",
+  "output": "CMakeFiles/BenchmarkRunner.dir/Algorithms/Karatsuba.cpp.obj"
+}
+]
